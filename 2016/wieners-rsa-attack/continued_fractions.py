@@ -11,12 +11,14 @@ def isclose(a, b):
     return math.fabs(a-b) < 10**(-10)
 
 def get_expansion_from_rational(n, d):
-    q = float(n)/d; 
+    return get_expansion(float(n)/d)
+
+def get_expansion(q, limit=10):
     e = []; 
     i=0
     e.append(int(math.floor(q)))
     r = q - e[i]
-    while r > 10**(-10):
+    while r > 10**(-10) and i < limit:
         i += 1 
         if isclose(math.ceil(1.0/r), 1.0/r):
             e.append(math.ceil(1.0/r))
@@ -39,12 +41,19 @@ def get_rational_from_expansion(e):
 
     return (n[-1], d[-1])
 
+def get_convergents(seq):
+    for i in range(1, len(seq)):
+        n, d = (get_rational_from_expansion(seq[:i]))
+        print("%d/%d, %f"%(n,d, float(n)/d))
+        
+
 #get_expansion(415, 93)
 # (73, 95)
 # [0, 1, 3, 3, 7]
 if __name__ == '__main__':
-    e = get_expansion(73, 95)
-    print(e)
+    #e = get_expansion(3.14159)
+    get_convergents([3, 7, 15, 1, 292, 1, 1, 1, 2])
+    #print(c)
     #nd = get_rational_from_expansion([0, 1, 3, 3, 7])
     #nd = get_rational_from_expansion(e)
     #print(nd)
