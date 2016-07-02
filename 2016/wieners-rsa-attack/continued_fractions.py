@@ -52,7 +52,9 @@ def get_convergents(seq):
 # [0, 1, 3, 3, 7]
 if __name__ == '__main__':
     #e = get_expansion(3.14159)
-    get_convergents([3, 7, 15, 1, 292, 1, 1, 1, 2])
+    e = get_expansion_from_rational(17993, 90581)
+    print(e)
+    #get_convergents([3, 7, 15, 1, 292, 1, 1, 1, 2])
     #print(c)
     #nd = get_rational_from_expansion([0, 1, 3, 3, 7])
     #nd = get_rational_from_expansion(e)
