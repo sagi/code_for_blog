@@ -41,8 +41,6 @@ def convergents(e):
 
     return c
 
-
-
 print(convergents(cf_expansion(17993, 90581)))
 print((cf_expansion(17993, 90581)))
 
