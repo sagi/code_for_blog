@@ -20,7 +20,6 @@ def test_cf_expansion():
     return cf_expansion(17993, 90581) == [0, 5, 29, 4, 1, 3, 2, 4, 3] 
 
 def convergents(e):
-    c = []
     n = [] # Nominators
     d = [] # Denominators
 
@@ -37,10 +36,9 @@ def convergents(e):
 
         n.append(ni)
         d.append(di)
-        c.append((ni, di))
+        yield (ni, di)
 
-    return c
-
-print(convergents(cf_expansion(17993, 90581)))
-print((cf_expansion(17993, 90581)))
+if __name__ == '__main__':
+    print((cf_expansion(17993, 90581)))
+    print(list(convergents(cf_expansion(17993, 90581))))
 
