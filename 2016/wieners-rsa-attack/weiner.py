@@ -13,7 +13,9 @@ print (expansion)
 
 print(d)
 print('----------')
+
 for f in convs:
-    ni, di = f
+    k, di = f
     if d == di:
+        possible_phi = (e*di - 1) / k
         print('found d')
