@@ -24,7 +24,8 @@ if __name__ == '__main__':
     convergents = cf.get_convergents(cf_expansion)
     print('[+] Found the continued fractions expansion convergents of e/N.')
 
-    print('[+] Iterating over convergents; Testing correctness through factorization.')
+    print('[+] Iterating over convergents; '
+            'Testing correctness through factorization.')
     print('[+] ...')
     for pk, pd in convergents: # pk - possible k, pd - possible d
         if pk == 0:
