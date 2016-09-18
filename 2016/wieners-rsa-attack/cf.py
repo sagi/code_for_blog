@@ -1,7 +1,7 @@
 #!/usr/bin/python3
 
 # Rational numbers have finite a continued fraction expansion.
-def cf_expansion(n, d):
+def get_cf_expansion(n, d):
     e = []
     q = n // d
     r = n % d
@@ -16,10 +16,10 @@ def cf_expansion(n, d):
 
     return e
 
-def test_cf_expansion():
+def test_get_cf_expansion():
     return cf_expansion(17993, 90581) == [0, 5, 29, 4, 1, 3, 2, 4, 3] 
 
-def convergents(e):
+def get_convergents(e):
     n = [] # Nominators
     d = [] # Denominators
 
@@ -39,6 +39,6 @@ def convergents(e):
         yield (ni, di)
 
 if __name__ == '__main__':
-    print((cf_expansion(17993, 90581)))
-    print(list(convergents(cf_expansion(17993, 90581))))
+    print((get_cf_expansion(17993, 90581)))
+    print(list(get_convergents(get_cf_expansion(17993, 90581))))
 
