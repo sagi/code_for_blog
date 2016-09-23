@@ -1,5 +1,8 @@
 # Crypto Classics: Wiener's RSA Attack
-~wiener.py~ aaat a
+`wiener.py` generates a vulnerable random `RSA` key-pair
+(has a short private exponent) and breaks it (factors `N`).
+
+
 A step-by-step explanation of the attack can be found in this [blog post](https://sagi.io/2016/04/crypto-classics-wieners-rsa-attack/).
 
 ~~~
