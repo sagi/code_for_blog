@@ -29,8 +29,8 @@ $ ./wiener.py
 ~~~
 
 ### Installation ##
-Tested on ~Ubuntu 16.04.1~. Before running ~wiener.py~, please do the following:
-~~
+Tested on `Ubuntu 16.04.1`. Before running `wiener.py`, please do the following:
+~~~
 sudo apt-get install python3-sympy python3-gmpy2
-~~
+~~~
 
