@@ -27,3 +27,10 @@ $ ./wiener.py
 [+] ++ SHA1(q):     d34f85dbc869626f7cab9c367bcbfec8aad8a6d3
 [+] ++ SHA1(phiN):  a5835c28d591a66e57eacdeab88a0d1d0cb3d74
 ~~~
+
+### Installation ##
+Tested on ~Ubuntu 16.04.1~. Before running ~wiener.py~, please do the following:
+~~
+sudo apt-get install python3-sympy python3-gmpy2
+~~
+
