@@ -38,7 +38,7 @@ def exact_pfp(n, m, k):
 
 class bloom_filter:
   def __init__(self, m, k, h=h_i):
-    self.m = m # size of vector
+    self.m = m # length of bit array
     self.k = k # number of hash functions
     self.h = h # hash function
     self.bits = bitarray(self.m) # the actual bit store
