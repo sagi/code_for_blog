@@ -8,10 +8,8 @@ from string import ascii_letters
 import bloom
 
 def random_string(size=10):
-  #size = random.randint(1,15)
   rand_str = ''.join(([random.choice(ascii_letters) for i in range(size)]))
   return str.encode(rand_str)
-
 
 def empirical_false_positive_rate(bf, nr_tests=1, nr_strings=1000):
   c = 0
@@ -25,7 +23,6 @@ def empirical_false_positive_rate(bf, nr_tests=1, nr_strings=1000):
   avg_fpr = ((c/nr_tests)*(1/nr_strings))
   avg_errs = c/nr_tests
   return (int(avg_errs), avg_fpr)
-
 
 if __name__ == '__main__':
   public_keys = set()
@@ -65,7 +62,7 @@ if __name__ == '__main__':
     # Can't be...
     print('[-] Test: One or more public key were not found within the bloom filter.')
 
-  # Testing the the empirical false positive rate by generating random strings
+  # Testing the empirical false positive rate by generating random strings
   # (that are surely not in the bloom filter) and check if the bloom filter 
   # contains them.
   nr_tests = 10
