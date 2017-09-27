@@ -1,7 +1,7 @@
 # Bloom Filters for the Perplexed
 
-`bloom.py` -  a simple bloom filter implementation.
-`test_bloom.py` - tests the bloom filter effectiveness with vulnerable keys from [the debian openssl debacle](https://github.com/g0tmi1k/debian-ssh).
+- `bloom.py` -  a simple bloom filter implementation.
+- `test_bloom.py` - tests the bloom filter effectiveness with vulnerable keys from [the debian openssl debacle](https://github.com/g0tmi1k/debian-ssh).
 
 More information can be found in this [blog post](https://sagi.io/2017/07/bloom-filters-for-the-perplexed/)
 
